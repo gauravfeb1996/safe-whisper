@@ -3,13 +3,40 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --txt-color: #475569;
+  --color-btn: #9fa8da;
+  --link-color: #64748b;
+  --active-link-color: #5c6bc0;
+  --placeholder-text: #95a4b9;
+  --overlay-bg: #f5f9fa;
+  --bg-1: #e2f0f2;
+  --bg-2: #ede7f6;
+  --highlighted-user: #80cbc4;
+  /* temporary variable for highlighted user, 
+  will be removed in the future when we have 
+  a better use case for it */
 }
 
+/* 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+} */
+
+@theme inline {
+  --color-btn: var(--color-btn);
+  --txt-color: var(--txt-color);
+  --link-color: var(--link-color);
+  --active-link-color: var(--active-link-color);
+  --placeholder-text: var(--placeholder-text);
+  --overlay-bg: var(--overlay-bg);
+  --app-bg: linear-gradient(147deg, var(--bg-1) 25%, var(--bg-2) 75%);
+  --highlighted-user: var(--highlighted-user);
+  /* temporary variable for highlighted user, 
+  will be removed in the future when we have 
+  a better use case for it */
 }
 
 @media (prefers-color-scheme: dark) {
