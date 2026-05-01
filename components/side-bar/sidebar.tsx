@@ -30,7 +30,7 @@ export function AppSidebar() {
       {/* Top Header */}
       <SidebarHeader>
         <div className="px-2 py-2">
-          <h2 className="text-lg font-semibold">SafeSpace</h2>
+          <h2 className="text-lg font-bold">SafeSpace</h2>
         </div>
       </SidebarHeader>
       <Separator />
@@ -41,7 +41,7 @@ export function AppSidebar() {
             <SidebarMenu>
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
+                  <SidebarMenuButton asChild className="font-semibold">
                     <Link href={item.url}>
                       <item.icon />
                       <span>{item.title}</span>
@@ -58,7 +58,7 @@ export function AppSidebar() {
       <SidebarFooter>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton asChild>
+            <SidebarMenuButton asChild className="font-semibold">
               <Link href="/settings">
                 <Settings />
                 <span>Settings</span>

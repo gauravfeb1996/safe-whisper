@@ -10,6 +10,7 @@ interface TextFieldProps {
   rightAddon?: React.ReactNode;
   classNames?: {
     field?: string;
+    inputGroup?: string;
     label?: string;
     description?: string;
     input?: string;

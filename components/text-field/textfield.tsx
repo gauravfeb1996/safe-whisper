@@ -40,15 +40,10 @@ export function TextField({
         {label}
         {isRequired && <span className={classNames.required}>*</span>}
       </FieldLabel>}
-      <InputGroup>
+      <InputGroup className={classNames.inputGroup}>
         {leftAddon && renderAddon(leftAddon, "inline-start")}
         <InputGroupInput
-          // className={classNames.input}
-          className="
-            !border-red-500
-            focus-visible:!border-red-500
-            focus-visible:!ring-0
-            rounded-xl"
+          className={classNames.input}
           id={label}
           type={type}
           placeholder={placeholder || ""}
