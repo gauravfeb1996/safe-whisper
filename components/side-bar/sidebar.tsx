@@ -1,10 +1,14 @@
 "use client";
 
-import type { ComponentType } from "react";
 import Link from "next/link";
-import {
-  Settings
-} from "lucide-react";
+import { Settings, Home, Users, BookOpen, Bookmark } from "lucide-react";
+
+const items = [
+  { title: "Community Feed", url: "/home", icon: Home },
+  { title: "Support Groups", url: "/groups", icon: Users },
+  { title: "Resources", url: "/resources", icon: BookOpen },
+  { title: "Saved Posts", url: "/saved", icon: Bookmark },
+];
 
 import {
   Sidebar,
@@ -19,17 +23,7 @@ import {
 } from "@/components/ui/sidebar";
 import { Separator } from "../ui/separator";
 
-interface SidebarItem {
-  title: string;
-  url: string;
-  icon: ComponentType;
-}
-
-interface SidebarItems {
-  items: SidebarItem[];
-}
-
-export function AppSidebar({ items }: SidebarItems) {
+export function AppSidebar() {
 
   return (
     <Sidebar>
