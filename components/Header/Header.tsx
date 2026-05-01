@@ -1,18 +1,19 @@
 import { Bell, Search } from "lucide-react";
-import { InputGroup, InputGroupAddon, InputGroupInput } from "@/components/ui/input-group";
+import { TextField } from "@/components/text-field/textfield";
 
 export function Header() {
     return (
         <div className="sticky top-0 z-50 flex border-b px-6 py-3.5 bg-background items-center">
-            <InputGroup className="w-1/2 rounded-full pl-4 mx-auto">
-                <InputGroupAddon align="inline-start">
-                    <Search />
-                </InputGroupAddon>
-                <InputGroupInput
+            <div className="w-1/2 mx-auto">
+                <TextField
                     placeholder="Search for topics, feelings, support...."
-                    className="placeholder:font-semibold text-black rounded-full"
+                    leftAddon={<Search />}
+                    classNames={{
+                        input: "placeholder:font-semibold text-black",
+                        inputGroup: "rounded-full",
+                    }}
                 />
-            </InputGroup>
+            </div>
             <Bell size={20} />
         </div>
     );
