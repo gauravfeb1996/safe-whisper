@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button"
 import {
   Card,
   CardContent,
@@ -15,12 +14,12 @@ interface CardProps {
     content: string | React.ReactNode;
     footer?: string | React.ReactNode;
     classes?: {
-        card: string,
-        header: string,
-        title: string,
-        description: string,
-        content: string
-        footer: string
+        card?: string;
+        header?: string;
+        title?: string;
+        description?: string;
+        content?: string;
+        footer?: string;
 
     }
 }

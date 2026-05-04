@@ -1,3 +1,9 @@
+import FeedContentCard from "@/components/feed-card/feedContentCard";
+
 export default function HomePage() {
-  return <div>Home Page</div>;
+  return (
+    <div>
+      <FeedContentCard />
+    </div>
+  );
 }
